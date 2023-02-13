@@ -111,6 +111,7 @@
             required
           />
         </label>
+
         <label for="email">
           Email:
           <input
@@ -122,24 +123,19 @@
             required
           />
         </label>
+
         <label for="spam_checkbox">
           Would you like to receive occassional emails with offers from us?
           (Check the box if Yes)
           <input type="checkbox" name="spam_checkbox" id="spam_checkbox" />
         </label>
-        <label for="comments">
-          Comments: <br />
-          <textarea rows="5" cols="40" name="comments"></textarea>
-        </label>
-        <label for="submit">
-          <input
-            onclick="submitForm()"
-            name="submit"
-            type="submit"
-            value="Sign Up!"
-            id="signupbutton"
-          />
-        </label>
+
+        <label for="comments">Comments: </label>
+        <textarea rows="5" cols="40" name="comments"></textarea>
+
+        <button onclick="submitForm()" type="submit" id="signupbutton">
+          Sign Up!
+        </button>
       </form>
     </div>
 
