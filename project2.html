@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CHANGE: added > to complete the tag close -->
+    <meta charset="utf-8" />
+    <title>Accessibility Course Overview</title>
+    <link rel="stylesheet" href="project2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navigation">
+        <h4>ASSIGNMENT 2</h4>
+        <div class="links">
+          <a tabindex="1" href="#home">Home</a>
+          <a tabindex="2" href="#links">Links</a>
+          <a tabindex="3" href="#signup">Signup</a>
+        </div>
+      </nav>
+
+      <div id="accessibility_banner">
+        <h1 id="overview_text">Accessibility Overview</h1>
+      </div>
+
+      <div id="video_container">
+        <div id="video_information">
+          <div class="video_info_text">
+            <h1>A Simple Introduction</h1>
+            <p>
+              Watch the video to the right to get an idea of how disabilities
+              can affect employment, as one example.
+            </p>
+            <p>
+              Or if you want to dive further, check out the links below or sign
+              up and send us your information. You can access the functions on
+              the web via normal means or keyboard.
+            </p>
+          </div>
+          <p class="download_vtt">
+            <span>Hard of hearing? </span>
+            <a tabindex="4" href="captions/employment-movie.vtt" download
+              >Download Video Captions as VTT File</a
+            >
+          </p>
+        </div>
+
+        <video
+          poster="video/employment-graph.jpg"
+          title="videoplayer"
+          width="480"
+          height="360"
+          id="thevideo"
+          tabindex="5"
+          controls
+        >
+          <source src="video/employment-movie.mp4" type="video/mp4" />
+          <track
+            kind="captions"
+            src="captions/employment-movie.vtt"
+            srclang="en"
+            label="English captions"
+          />
+        </video>
+      </div>
+
+      <div id="links_container">
+        <div class="heading2">Helpful Links</div>
+
+        <ul id="links">
+          <li>
+            <a
+              role="button"
+              tabindex="6"
+              href="https://www.barnardhci.com"
+              target="_blank"
+            >
+              Accessibility Research <br />
+              at Hamilton
+            </a>
+          </li>
+          <li>
+            <a
+              role="button"
+              tabindex="7"
+              href="https://www.hamilton.edu/offices/dos/accessibility"
+              target="_blank"
+            >
+              Disability Services <br />
+              at Hamilton
+            </a>
+          </li>
+          <li>
+            <a
+              role="button"
+              tabindex="8"
+              href="https://xkcd.com/"
+              target="_blank"
+              >XKCD</a
+            >
+          </li>
+          <li>
+            <a
+              role="button"
+              tabindex="9"
+              href="https://www.youtube.com/watch?v=HtTyRajRuyY"
+              target="_blank"
+            >
+              A11ycasts Videos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <h1 id="signup" class="heading">Sign Up!</h1>
+
+      <form id="sign-up-form">
+        <label for="name">
+          Full Name:
+          <input
+            tabindex="10"
+            type="text"
+            name="name"
+            size="20"
+            id="name"
+            placeholder="John Doe"
+            required
+          />
+        </label>
+        <label for="email">
+          Email:
+          <input
+            tabindex="11"
+            id="email"
+            name="email"
+            type="email"
+            size="20"
+            placeholder="x@y.com"
+            required
+          />
+        </label>
+        <label for="spam_checkbox">
+          Would you like to receive occassional emails with offers from us?
+          (Check the box if Yes)
+          <input
+            tabindex="12"
+            type="checkbox"
+            name="spam_checkbox"
+            id="spam_checkbox"
+          />
+        </label>
+        <label for="comments">
+          Comments: <br />
+          <textarea tabindex="13" rows="5" cols="40" name="comments"></textarea>
+        </label>
+        <input
+          onclick="submitForm()"
+          type="submit"
+          value="Sign Up!"
+          id="signupbutton"
+        />
+      </form>
+    </div>
+
+    <script src="project2.js"></script>
+  </body>
+</html>
